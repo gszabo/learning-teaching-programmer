@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Craftlab meetup</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/emarsys.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Tanulás és tanítás szoftver-fejlesztőként</h1>
+						<div style="float: left;">Szabó Gábor</div>
+						<div style="float: right;">gabor.szabo@emarsys.com</div>
+						<aside class="notes">
+							smile with your eyes, be open with your hands, switch it on
+							Koszontok mindenkit, Szabo Gabor vagyok es arrol fogok beszelni,
+							hogy a programozoi tanulmanyaim es fejlodesem soran mik voltak azok
+							a merfoldkovek, amelyek alapvetoen formaltak a szemleletem a szoftverfejlesztesrol.
+							Ezeket az ismereteket igyekszem kulonbozo forumokon tovabbadni masoknak - dojokat szervezek es
+							egyetemen oktatok -, es az eloadassal szeretnelek meggyozni titeket arrol, hogy cselekedjetek hasonloan.
+							Ki az aki tanít valahol? Workshopok? Blogok?
+						</aside>
+					</section>
+					<section>
+						<img src="be-kind.jpg" alt="Legyetek kedvesek">
+						<aside class="notes">
+							Az elso meetupos eloadasom,
+							es szeretnem azt kerni, amit az emarsysnal uj erkezo
+							bemutatasakor kerunk: "az eloadast fogadjatok szeretettel es legyetek vele kedvesek."
+						</aside>
+					</section>
+					<section>
+						<p>(szoftver)fejlesztő = programozó</p>
+						<p>design: belső struktúra tervezése</p>
+						<aside class="notes">
+							Engedjetek meg, hogy az eloadas erejeig ezt a terminologiat bevezessem.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h2>Tanulás és tanítás</h2>
+					<ol>
+						<li>Motiváció</li>
+						<li>Meghatározó elemek</li>
+						<li>Tudásátadás módjai</li>
+					</ol>
+				</section>
+				<section>
+					<section>
+						<h2>Motiváció</h2>
+					</section>
+					<section>
+						<h3>Tanítva tanulás</h3>
+						<aside class="notes">
+							Általános iskola óta jó voltam bonyolult dolgok elmagyarázásában. Ha keresztülküzdöttem magam egy nehéz
+							anyagrészen (matek, fizika, kémia) és sikerült megértenem, akkor szívesen osztottam meg a megértéshez vezető utat másokkal.
+							Ez gyakran segített nekik, és én is még jobban elsajátítottam az anyagot.
+						</aside>
+					</section>
+					<section>
+						<h3>Szakmai elhivatottság</h3>
+						<aside class="notes">
+							Nehéz, bonyolult szakmában dolgozunk. De minden problémája és nehézsége ellenére imádom.
+							Hivatásként tekintek rá, és szeretném ha kívülről is profi, megbízható szakmaként tekintenének ránk.
+							Ettől sajnos még messze vagyunk, pl. a saját apám hetente panaszkodik rosszul leszállított,
+							méregdrága enterprise szoftverekről.
+							Szeretnék büszkén tekinteni a szakmámra. Miért? Mert óriási az igény a munkánkra.
+						</aside>
+					</section>
+					<section>
+						<h3>Igény</h3>
+						<blockquote>
+							We shall need a <strong style="color: yellow;">great number of</strong> mathematicians of ability, because there will probably be a <strong style="color: yellow;">good deal of work</strong> of this kind to be done.
+						</blockquote>
+						<p style="float: right;">&mdash; Alan Turing, 1940s</p>
+						<aside class="notes">
+							Alan Turing (a számítástechnika egyik ősatyja) már a negyvenes években megsejtette, hogy a számítógéppel megoldott problémák köre csak bővülni fog.
+							Elsőként a kézi számoló emberek munkájának kiváltását vízionálta, de már azt mondja, hogy mathematicians of ability.
+						</aside>
+					</section>
+					<section>
+						<h3>Igény</h3>
+						<blockquote>
+							Sok az eszkimó, kevés a fóka.
+						</blockquote>
+						<p style="float: right;"><span style="text-decoration: line-through;">Madách Imre</span> &mdash; Lazlo, 2015</p>
+						<div style="clear: both;"></div>
+						<p>Projektek &#x226B; csapatok</p>
+						<aside class="notes">Hazon beluli pelda: Laci. Lazlo a pesti ceg egyik alapitoja, spiritualis vezetoje.</aside>
+					</section>
+					<section>
+						<p>Milyen fejlesztőre van igény?</p>
+						<p class="fragment">professzionális</p>
+						<aside class="notes">
+							"szakemberekre"
+						</aside>
+					</section>
+					<section>
+						<h3>Professzionális fejlesztő</h3>
+						<p>Megbízhatóság</p>
+						<p>Fenntarthatóság</p>
+						<p>Felelősségvállalás</p>
+						<aside class="notes">
+							<p>
+								Megbízhatóság:
+									Tartja a becsléseket, commitmenteket, határidőket.
+									Minőségi munkát végez, amire az üzleti oldal dependálhat.
+							</p>
+							<p>Fenntarthatóság: Olvasható, hosszú távon fejleszthető, karbantartható megoldást készít</p>
+							<p>Felelősségvállalás: Hibáiból tanul. Etikátlan feladatot nem hajt végre. Felelősséget érez a munkájáért és a szakmájáért.</p>
+							<p>
+								Igyekszem ilyen lenni és ezt a szemléletet továbbadni. Ez számomra egybecseng Kent Beck víziójával,
+								miszerint az eXtreme Programming megalkotásával a célja az volt, segítsen meggyógyítani azt a sebet,
+								ami a fejlesztők és a menedzserek között keletkezett a munkájuk minősége miatt.
+								Karrierem eddigi csúcspontja az, hogy lájkolta egy tweetemet.
+							</p>
+							<p>Tehát sok megbízható szakemberre van szükség ebben az iparban, de van egy kis bökkenő.</p>
+							<p>Ki dolgozik legalabb 5, 10, 15, ... eve szoftverfejlesztokent?</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Örökös tapasztalatlanság</h3>
+						<p>5 évente duplázódás</p>
+						<p class="fragment" style="font-style: italic;">A programozók felének 5 évnél kevesebb tapasztalata van!</p>
+						<aside class="notes">
+							<p>
+								Korunk egyik legnagyobb programozója, Uncle Bob azt a megfigyelést tette, hogy az elmúlt 60 évben
+								a programozók száma 5 évente megduplázódik. Vagyis a felének 5 évnél kevesebb tapasztalata van.
+							</p>
+							<p>Ebből adódóan sok programozó sétál bele azokba a hibákba, amikbe elődei is.</p>
+						</aside>
+					</section>
+					<section>
+						<p>Tanítvan tanulás</p>
+						<p>Szakmai elhivatottság</p>
+						<p>Óriási igény</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Meghatározó elemek</h2>
+					</section>
+					<section>
+						<h3>Változó környezet</h3>
+						<img src="new-js-framework.png" alt="Új JS framework">
+						<img src="sub-zero.png" alt="">
+						<aside class="notes">
+							<p>Jó példa az állandó változásra a frontend. Gyakran jelennek meg új, csillogó eszközök és kerülnek hypeolásra az előnyök és hátrányok felmérése nélkül.</p>
+							<p>Pl. ciki 2016-ban jQuery-t használni egy weboldal/alkalmazás elkészítéséhez.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Mérnöki szemlélet</h3>
+						<p>Milyen problémát old meg?</p>
+						<p>Mekkora komplexitással jár?</p>
+						<p>Mennyire rugalmas? Mit zárunk ki vele?</p>
+						<p>... <a href="https://emartech.github.io/omega" class="fragment" target="_blank">Példa</a></p>
+						<aside class="notes">
+							<p>Nincs szent eszköz!</p>
+							<p>Fel kell tenni ezeket a kérdéseket egy megoldás/eszköz választásakor</p>
+							<p>Komplexitásba beletartozik a konfigurálás, tanulási görbe</p>
+							<p>Pl. az Omega: nem használ kliens oldali frameworköt, nem volt rá szükség pedig reflexből itt is felmerült hogy milyen verziót használjunk az angularból.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Nézzünk mélyebbre</h3>
+						<blockquote cite="http://chimera.labs.oreilly.com/books/1234000001813/ch03.html#solution_id9">
+							[...] The Long Road teaches craftsmen the <strong style="color: yellow;">deeper truths of the craft</strong>,
+							allowing the masters to <strong style="color: yellow;">transcend specific technologies</strong> and cut to the heart of the problem.
+						</blockquote>
+						<aside class="notes">
+							Mindig lesz jobb hardver es uj technologia amit meg lehet tanulni, de az igazi ertekes tudas melyebben rejtozik.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Design</h2>
+					</section>
+					<section>
+						<h3>SOLID elvek</h3>
+						<ol>
+							<li>Single Responsibility Principle</li>
+							<li>Open-Closed Principle</li>
+							<li>Liskov Substitution Principle</li>
+							<li>Interface Segregation Principle</li>
+							<li>Dependency Inversion Principle</li>
+						</ol>
+						<aside class="notes">
+							Mindegyiknek van egy altalanos uzenete:
+							SRP - csak 1 use-case actor igenyenek valtozasa indukaljon valtozast a kod egy reszeben
+							OCP - bovitsuk ugy az alkalmazast, hogy meglevo kodon ne kelljen valtoztatni
+							LSP - boviteskor figyelni kell a definialt contractra
+							ISP - ne fuggj olyan dolgoktol amire nincs szukseged
+							DIP - forditsd meg a source es a runtime dependencia iranyat ket modul kozott, hogy el tudd szeparalni a high-level logikakat a low-level reszletektol
+							Hasznos oket allasinterjun tudni :)
+						</aside>
+					</section>
+					<section>
+						<h3>Package elvek</h3>
+						<div style="width: 50%; float: left;">
+							<h4>Cohesion</h4>
+							<ol>
+								<li>Release-reuse Equivalency Principle</li>
+								<li>Common Closure Principle</li>
+								<li>Common Reuse Principle</li>
+							</ol>
+						</div>
+						<div style="width: 50%; float: left;">
+							<h4>Coupling</h4>
+							<ol>
+								<li>Acyclic Dependencies Principle</li>
+								<li>Stable Dependencies Principle</li>
+								<li>Stable Abstractions Principle</li>
+							</ol>
+						</div>
+						<aside class="notes">
+							Szinten jo tudni oket interjun :)
+							Package: a deployment egysege. DLL, JAR, gem, npm package
+							A kohezios elvek egymas ellen dolgoznak, egyik a felhasznalast egyszerusiti, masik a fuggetlen fejlesztest es deploymentet.
+							Ezeket akkor erdemes alkalmazni, ha a kodbazis nagy resze megvan
+							Pl. Babel 6 sok plugin architekturaja jol alkalmazta ezeket arra a celra, hogy sokfele konfiguraciot lehessen osszeallitani csupan deploy-jal
+						</aside>
+					</section>
+					<section>
+						<h3>Patternek</h3>
+						<p>Gyakran felmerülő problémákra megoldások.</p>
+						<p class="fragment" style="font-style: italic;">Észre kell tudni venni őket!</p>
+						<aside class="notes">
+							A "nagy mesterek" megoldasai.
+							Ami fontos: ismerni kell oket kozelrol, melyen es latni ha az alkalmazasban "felbukkannak".
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Discipline</h2>
+					</section>
+					<section>
+						<h3>Clean code</h3>
+						<blockquote>reads like well written prose</blockquote>
+						<blockquote>written by someone who cares [...] there is nothing obvious to make it better</blockquote>
+						<blockquote>[...]when each routine you read turns out to be pretty much what you expected[...]</blockquote>
+						<aside class="notes">
+							Szemelyes eletmegvaltoztato tortenet ~ Lacinak az XP konyv
+							Olvashato kod
+							Beszedes nevek
+							Absztrakcios szintek
+							Duplikaciok megszuntetese
+							Minden gondolat, koncepcio kifejezve
+							elony: smellek elkerulese, nem kell hosszu fonalakon keresgelni mit hol kell modositani, konnyebb becsulni, lokalizalt valtoztatasok
+						</aside>
+					</section>
+					<section>
+						<h3>Test Driven Development</h3>
+						<aside class="notes">
+							2x viszel be dolgokat, folyamatosan ellenorzod magad
+							segit a designban
+							inkrementalisan, kis lepesekben tudsz odajutni a celhoz
+						</aside>
+					</section>
+					<section>
+						<h3>Professzionális viselkedés</h3>
+						<p>Felelősséget vállalni</p>
+						<p>Nemet mondani</p>
+						<p>Nyugodtnak maradni</p>
+						<aside class="notes">
+							Sietni, rohanni nem vezet celra
+							Orvos hasonlat: mutetet hat vegre, deadline, megsem azt szeretned latni hogy kapkod es karomkodik, hanem nyugodt es nagyjabol szabalyosan vegzi a teendojet
+						</aside>
+					</section>
+				</section>
+				<section>
+					<p>Mérnöki szemlélet</p>
+					<p>Software design</p>
+					<p>Development discipline</p>
+				</section>
+				<section>
+					<section>
+						<h2>Tudásátadás módjai</h2>
+					</section>
+					<section>
+						<h2>Munka közben</h2>
+						<p>Minél több tapasztalatod van, annál többet dolgozz párban!</p>
+						<aside class="notes">
+							<p>Pl. Lilla feedbackje, hogy a csapatban mindenkinek volt egy kis tanári beállítottsága és neki kellett is ez a Greenfox háttér miatt</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Coding dojo</h2>
+						<p>Párprogramozás</p>
+						<p>TDD</p>
+						<p style="font-style: italic;">Join us!</p>
+						<aside class="notes">
+							<p>Heti-ketheti osszejovetel coding KATA-k megoldasara, pair-programming, tdd
+							egyre nagyobb szazalekban sikerul megoldani a feladatokat, tesztek refaktoralasa siker</p>
+							<p>Ha valaki szeretne csatlakozni, keressen meg es kuldok meghivot</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Egyetemi oktatás</h2>
+						<div>XP, Clean Code, SOLID, TDD</div>
+						<aside class="notes">
+							Halljanak az egyetemen ezekrol, hogy el tudjanak ezen az uton maguktol is indulni
+							Hazi feladatokban mar-mar tulhasznaljak az elveket es technikakat, ami egy termeszetes lepese a tanulasnak
+							Jo alap ahhoz, hogy bealljon a trade-off szemleletre
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h2>Útravaló</h2>
+					<p>Keresd a szemléletformáló gondolatokat</p>
+					<p>Gondozd a szakmát, ráfér :)</p>
+				</section>
+				<section>
+					<h2>Köszönöm a figyelmet!</h2>
+					<p>?</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
